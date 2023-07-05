@@ -11,14 +11,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller
-@EnableAsync
+//@Controller
+//@EnableAsync
 public class MailController {
 	
 	@Autowired
 	private MailService mailService;
 	
-	@RequestMapping(value = "/sendMail.do", method = RequestMethod.GET)
+//	@RequestMapping(value = "/sendMail.do", method = RequestMethod.GET)
 	public void sendSimpleMail(HttpServletRequest req,
 			HttpServletResponse resp) throws Exception {
 		req.setCharacterEncoding("utf-8");

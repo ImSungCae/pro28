@@ -1,4 +1,4 @@
-package com.myspring.pro28.ex03;
+package com.myspring.pro28.ex04;
 
 import javax.mail.internet.MimeMessage;
 
@@ -9,7 +9,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-//@Service("mailService")
+@Service("mailService")
 public class MailService {
 	
 //	mail-context.xml 에서 설정한 빈을 자동으로 주입합니다.
@@ -30,7 +30,7 @@ public class MailService {
 			messageHelper.setFrom("spr3133@gmail.com","임성채"); // 송신자의 메일과 이름
 			messageHelper.setSubject(subject);
 			messageHelper.setTo(to);
-			messageHelper.setText(body);
+			messageHelper.setText(body,true);
 			mailSender.send(message);
 		}catch (Exception e) {
 			e.printStackTrace();

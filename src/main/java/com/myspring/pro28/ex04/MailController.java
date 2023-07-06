@@ -38,7 +38,7 @@ public class MailController {
 		
 		sb.append("</body></html>");
 		String str = sb.toString();
-		mailService.sendMail("kimkiju01@gmail.com", "신상품을 소개합니다.", str);
+		mailService.sendMail("lschmhj@naver.com", "신상품을 소개합니다.", str);
 		out.print("메일을 보냈습니다!!");
 	}
 }
